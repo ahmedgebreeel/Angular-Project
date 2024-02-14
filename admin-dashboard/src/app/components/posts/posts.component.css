@@ -1,0 +1,82 @@
+.posts{
+  border: 2px solid rgb(255, 255, 255);
+  margin-left: 20px;
+  width: 100%
+}
+
+.profile img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-txt > p{
+  color: rgba(160, 160, 160, 1);
+}
+.content{
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.content >p{
+  font-size: 16px;
+  color: rgba(160, 160, 160, 1);
+}
+.btns{
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.btn-a{
+  border: 2px solid #EC7849;
+  padding: 8px 62px;
+
+  justify-content: space-between;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: #EC7849;
+
+}
+.blogs{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.one-blog{
+  border: 2px solid #eee;
+  width: 31%;
+  border-radius: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+.one-blog > img{
+  border-top-left-radius:20px ;
+  border-top-right-radius:20px ;
+}
+.one-blog >h6{
+  padding: 15px 15px 0 15px;
+}
+.one-blog >p{
+  padding:0 15px 15px 15px;
+  line-height: 20px;
+  color: (116, 116, 116, 1)
+}
+.edit{
+  background-color: white;
+  border: #EC7849 2px solid;
+  padding:8px 40px;
+  border-radius: 10px;
+  color: #EC7849;
+  margin-left: 15px;
+  text-decoration: none;
+  margin: 10px 20px;
+}
+.delete{
+  background-color: #EC7849;
+  border: white 2px solid;
+  padding: 8px 40px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}

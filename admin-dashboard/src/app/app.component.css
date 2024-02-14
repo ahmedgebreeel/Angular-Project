@@ -1,0 +1,12 @@
+/* h1{
+  background-color: #efefef;
+  font-size: 25px;
+  text-align: center;
+
+} */
+
+
+/* style on app bs m4 f first , second */
+/* style l app component only */
+/* if i want to add style on all component i have like first and second .. style it at STYLE.CSS  */
+/* لانه في ملف app.component.html هو شايف h1 بس مش شايف اللي جوا app-first and app-second */
