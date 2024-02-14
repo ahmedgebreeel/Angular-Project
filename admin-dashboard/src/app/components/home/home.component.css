@@ -1,0 +1,81 @@
+.home{
+  border: 2px solid white;
+  margin-left: 20px;
+  width: 97%;
+}
+.profile{
+  float: right;
+  display: flex;
+}
+.profile img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-txt > p{
+  color: rgba(160, 160, 160, 1);
+}
+.content{
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.content >p{
+  font-size: 16px;
+  color: rgba(160, 160, 160, 1);
+}
+.posts-users{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.posts-users .post-div{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(237, 155, 128, 0.3);
+  width: 49%;
+  height: 160px;
+  padding: 30px 0;
+  border-radius: 20px;
+  /* margin-left: 10px; */
+}
+
+.blogs{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.one-blog{
+  border: 2px solid #eee;
+  width: 31%;
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+.one-blog > img{
+  border-top-left-radius:20px ;
+  border-top-right-radius:20px ;
+}
+.one-blog >h6{
+  padding: 15px 15px 0 15px;
+}
+.one-blog >p{
+  padding:0 15px 15px 15px;
+  line-height: 20px;
+  color: (116, 116, 116, 1)
+}
+.edit{
+  background-color: white;
+  border: #EC7849 2px solid;
+  padding:8px 40px;
+  border-radius: 10px;
+  color: #EC7849;
+  margin-left: 15px;
+  text-decoration: none;
+  margin: 10px 20px;
+}
+.delete{
+  background-color: #EC7849;
+  border: white 2px solid;
+  padding: 8px 40px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
