@@ -1,0 +1,85 @@
+.users {
+  border: 2px solid rgb(255, 255, 255);
+  margin-left: 20px;
+  width: 975px;
+}
+
+.profile img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-txt > p {
+  color: rgba(160, 160, 160, 1);
+}
+.content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.content > p {
+  font-size: 16px;
+  color: rgba(160, 160, 160, 1);
+}
+.user-search {
+  display: flex;
+  justify-content: space-between;
+}
+.user-search > input {
+  width: 440px;
+  height: 50px;
+  padding-left: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: none;
+}
+.user-txt button {
+  background-color: #ec7849;
+  width: 150px;
+  height: 45px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.user-txt {
+  width: 295px;
+  display: flex;
+  justify-content: space-between;
+}
+.user-txt p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.user-txt a {
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  margin-right: 3px;
+}
+.table {
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+}
+table {
+  width: 100%;
+}
+.table th {
+  background-color: rgba(237, 155, 128, 0.3);
+  width: 22%;
+  text-align: center;
+  color: #ec7849;
+}
+
+.table td > img {
+  margin: 10px;
+}
+.table td {
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+}
+td > button {
+  padding-left: 10px;
+  border: none;
+  background-color: white;
+}
