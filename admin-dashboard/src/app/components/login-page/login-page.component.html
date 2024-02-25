@@ -1,92 +1,144 @@
-
-<div class="co">
-    <section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="co">
+      <section>
         <div class="container h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
             <div class="col-lg-12 col-xl-11">
-              <div class="card text-black" style="border-radius: 25px;">
+              <div class="card text-black" style="border-radius: 25px">
                 <div class="card-body p-md-5">
                   <div class="row justify-content-center">
-
-
-                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-    
-                        <img src="assets/images/Eating healthy food-amico 1.png " 
-                          class="img-fluid" alt="Sample images">
-        
-                      </div>
+                    <div
+                      class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+                    >
+                      <img
+                        src="assets/images/Eating healthy food-amico 1.png "
+                        class="img-fluid"
+                        alt="Sample images"
+                      />
+                    </div>
 
                     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-      
                       <div class="fw-bold mb-5 md-4 mt-4">
                         <h2>Welcome back</h2>
-                        <h6 class=" fw-bold text-muted lowercase">Please login to continue.</h6>
+                        <h6 class="fw-bold text-muted lowercase">
+                          Please login to continue.
+                        </h6>
                       </div>
-                
-                      
+
                       <!-- <form > [formGroup]="loginValidation" > -->
-                        <form >
+                      <form>
                         <!-- < Email input -->
-                       <div class="form-outline mb-4">
-                            <label class="form-label" for="form1Example13">Email address</label>
-                          <input #email  type="email" id="form1Example13" class="form-control form-control-lg" />
+                        <div class="form-outline mb-4">
+                          <label class="form-label" for="form1Example13"
+                            >Email address</label
+                          >
+                          <input
+                            #email
+                            type="email"
+                            id="form1Example13"
+                            class="form-control form-control-lg"
+                          />
                           <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassageEmail}}</span> -->
-                        </div> 
+                        </div>
 
                         <!-- Password input -->
-                         <div class="form-outline mb-4 password">
-                            <label class="form-label" for="form1Example23">Password</label>
-                            <div class="Input-password">
-                              <input #password [type]="changeType? 'Password':'text'" id="form1Example23" class="form-control form-control-lg" />
-                              <span class="img  fw-bold text-muted" (click)="showPassword()"><i [ngClass]="visible? 'fa-solid fa-eye-slash': 'fa-solid fa-eye' "></i></span>
+                        <div class="form-outline mb-4 password">
+                          <label class="form-label" for="form1Example23"
+                            >Password</label
+                          >
+                          <div class="Input-password">
+                            <input
+                              #password
+                              [type]="changeType ? 'Password' : 'text'"
+                              id="form1Example23"
+                              class="form-control form-control-lg"
+                            />
+                            <span
+                              class="img fw-bold text-muted"
+                              (click)="showPassword()"
+                              ><i
+                                [ngClass]="
+                                  visible
+                                    ? 'fa-solid fa-eye-slash'
+                                    : 'fa-solid fa-eye'
+                                "
+                              ></i
+                            ></span>
 
-                              <i class=""></i>
-                            </div>
-                            <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span> -->
-                           
+                            <i class=""></i>
+                          </div>
+                          <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span> -->
                         </div>
 
-                        <div class=" mb-4"> 
+                        <div class="mb-4">
                           <!-- Checkbox -->
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                            <label class="form-check-label" for="form1Example3"> Remember me </label>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="form1Example3"
+                              checked
+                            />
+                            <label class="form-check-label" for="form1Example3">
+                              Remember me
+                            </label>
                           </div>
-                          
                         </div>
-                    
-                
+
                         <!-- Submit button -->
                         <button>
-                            <span  class="text" (click)="Add(email.value, password.value)">  Sign in </span>
+                          <span
+                            class="text"
+                            (click)="Add(email.value, password.value)"
+                          >
+                            Sign in
+                          </span>
                         </button>
-            
+
                         <div class="divider d-flex align-items-center my-4">
-                          <p class="text-center fw-bold mx-3 mb-0 text-muted">OR Signin With</p>
-                        </div> 
+                          <p class="text-center fw-bold mx-3 mb-0 text-muted">
+                            OR Signin With
+                          </p>
+                        </div>
 
                         <!-- sigin with google&Facebook -->
                         <div class="d-flex" id="btn-sigin">
-                          <a class="btn btn-white btn-lg btn-block" style="background-color: #b7b0b0" href="https://www.facebook.com/"
-                          role="button">
-                          <img src="assets/images/Vector.png">
-                        </a>
-                        <a class="btn btn-primary btn-lg btn-block" style="background-color: #c1bebe" href="https://myaccount.google.com/"
-                          role="button">
-                          <img src="assets/images/Google.png">
-                        </a>
+                          <a
+                            class="btn btn-white btn-lg btn-block"
+                            style="box-shadow: 3px 2px 3px 2px #eeeeee"
+                            href="https://www.facebook.com/"
+                            role="button"
+                          >
+                            <img src="assets/images/Vector.png" />
+                          </a>
+                          <a
+                            class="btn btn-lg btn-block"
+                            style="box-shadow: 3px 2px 3px 2px #eeeeee"
+                            href="https://myaccount.google.com/"
+                            role="button"
+                          >
+                            <img src="assets/images/Google.png" />
+                          </a>
                         </div>
                         <!--Don’t have an account-->
-                        <div class="text-center fw-bold text-muted Signup"> 
-                         Don’t have an account? Sign up<a routerLink="/register">Sign up</a>
+                        <div class="text-center fw-bold text-muted Signup">
+                          Don’t have an account? Sign up<a
+                            routerLink="/register"
+                            >Sign up</a
+                          >
                         </div>
-
                       </form>
-    
                     </div>
-
-                   
-                    
                   </div>
                 </div>
               </div>
@@ -94,6 +146,6 @@
           </div>
         </div>
       </section>
-
-</div>
-
+    </div>
+  </body>
+</html>

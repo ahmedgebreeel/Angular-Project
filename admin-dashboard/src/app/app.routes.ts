@@ -5,19 +5,16 @@ import { RegistrationPageComponent } from './components/registration-page/regist
 import { PostsComponent } from './components/posts/posts.component';
 import { UsersComponent } from './components/users/users.component';
 import { SettingComponent } from './components/setting/setting.component';
-
-
-
+import { UserHomeComponent } from './components/user-home/user-home.component';
 
 export const routes: Routes = [
-  {path:"",component:LoginPageComponent},
-  {path:"login",component:LoginPageComponent},
-  {path:"home",component:HomeComponent},
-  {path:"register",component:RegistrationPageComponent},
-  {path:"posts",component:PostsComponent},
-  {path:"users",component:UsersComponent},
-  {path:"setting",component:SettingComponent},
-  {path:"logout",component:LoginPageComponent},
-
-
+  { path: '', component: LoginPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'dashboard', component: HomeComponent },
+  { path: 'register', component: RegistrationPageComponent },
+  { path: 'posts', component: PostsComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'setting', component: SettingComponent },
+  { path: 'logout', component: LoginPageComponent },
+  { path: 'user-home', component: UserHomeComponent },
 ];
