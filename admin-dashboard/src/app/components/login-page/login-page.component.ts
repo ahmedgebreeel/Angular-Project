@@ -1,12 +1,16 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { UserService } from '../../Services/user.service';
+import {  HttpClientModule, provideHttpClient } from '@angular/common/http';
+provideHttpClient
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule ,NgClass, RouterModule],
+  imports: [FormsModule,ReactiveFormsModule ,NgClass, RouterModule, HttpClientModule],
+  providers: [UserService],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
@@ -17,6 +21,11 @@ export class LoginPageComponent {
   errorMassagePassword="";
   changeType:boolean=true;
   visible :boolean=true;
+
+ 
+  constructor(private sevice : UserService, private router: Router){
+      
+  }
 
    loginValidation = new FormGroup({
     email:new FormControl( "",
@@ -57,21 +66,35 @@ removeInput(){
  
 }
 
-  Add(){
+  Add(email:any, password:any){
    this.validationEmail();
    this.validationPassword();
-    console.log(this.loginValidation);
-    this.Email="";
-    this.Password="";
+    // console.log(this.loginValidation);
+
+    this.sevice.login({email, password}).subscribe({
+      next: (data)=>{console.log(data.body.userName);
+        if (data.body.role === "admin"){
+          // Save the token to local storage
+          localStorage.setItem("token", data.body.token);
+          // Navigate to another component with the username as a query parameter
+          this.router.navigate(['/home'], {queryParams:{userName: data.body.userName}});
+        }
+      },
+      error: (err)=>{console.log(err);
+        alert('Login failed. Please check your credentials and try again.');
+      }
+    });
+    // this.Email="";
+    // this.Password="";
   }
 
   showPassword(){
     this.changeType= !this.changeType;
     this.visible = ! this.visible ;
-
   }
 
   
+
   
 
 

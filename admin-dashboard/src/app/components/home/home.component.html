@@ -6,7 +6,7 @@
     <div class="profile">
       <img src="../../../assets/images/ff00088f8524bfba308ca961a83bd7c5.jpg" width="50px" height="50px" alt="">
       <div class="profile-txt">
-          <h5>Basma Elkenawy</h5>
+          <h5>{{userName}}</h5>
           <p>Web Developer</p>
       </div>
     </div>
@@ -31,7 +31,9 @@
         <div>
           <h4>Users</h4>
           <br>
-          <h3 style="color: #EC7849;">10</h3>
+          @if (usersNum) {
+            <h3 style="color: #EC7849;">{{usersNum}}</h3>
+          }@else {<h3 style="color: #EC7849;">loading...</h3>}
         </div>
   
         <div>

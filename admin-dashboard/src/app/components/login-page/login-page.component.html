@@ -24,24 +24,25 @@
                       </div>
                 
                       
-                      <form  [formGroup]="loginValidation" >
+                      <!-- <form > [formGroup]="loginValidation" > -->
+                        <form >
                         <!-- < Email input -->
                        <div class="form-outline mb-4">
                             <label class="form-label" for="form1Example13">Email address</label>
-                          <input formControlName="email" type="email" id="form1Example13" class="form-control form-control-lg" />
-                          <span  class="fw-bold text-muted lowercase">{{ errorMassageEmail}}</span>
+                          <input #email  type="email" id="form1Example13" class="form-control form-control-lg" />
+                          <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassageEmail}}</span> -->
                         </div> 
 
                         <!-- Password input -->
                          <div class="form-outline mb-4 password">
                             <label class="form-label" for="form1Example23">Password</label>
                             <div class="Input-password">
-                              <input formControlName="pass" [type]="changeType? 'Password':'text'" id="form1Example23" class="form-control form-control-lg" />
+                              <input #password [type]="changeType? 'Password':'text'" id="form1Example23" class="form-control form-control-lg" />
                               <span class="img  fw-bold text-muted" (click)="showPassword()"><i [ngClass]="visible? 'fa-solid fa-eye-slash': 'fa-solid fa-eye' "></i></span>
 
                               <i class=""></i>
                             </div>
-                            <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span>
+                            <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span> -->
                            
                         </div>
 
@@ -57,8 +58,8 @@
                 
                         <!-- Submit button -->
                         <button>
-                            <span  class="text" (click)="Add()">  Sign in </span>
-                          </button>
+                            <span  class="text" (click)="Add(email.value, password.value)">  Sign in </span>
+                        </button>
             
                         <div class="divider d-flex align-items-center my-4">
                           <p class="text-center fw-bold mx-3 mb-0 text-muted">OR Signin With</p>
