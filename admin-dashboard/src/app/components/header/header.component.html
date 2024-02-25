@@ -1,17 +1,68 @@
-<div class="contain">
-  <header class="navbar">
-    <div class="nav-logo">
-      <img src="assets/images/logo.png"  height="" alt="">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+  </head>
+  <body>
+    <div class="contain">
+      <header class="navbar">
+        <div class="nav-logo">
+          <img src="assets/images/logo.png" height="" alt="" />
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a
+              routerLink="/home"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ><i class="icons fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/posts"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ><i class="icons fa-solid fa-grip" style="color: #7c7c7c"></i>
+              Posts</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/users"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ><i class="icons fa-regular fa-user" style="color: #7c7c7c"></i>
+              Users</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/setting"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ><i class="icons fa-solid fa-gear" style="color: #7c7c7c"></i>
+              Setting</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/logout"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ><i
+                class="icons fa-solid fa-arrow-right-from-bracket"
+                style="color: #7c7c7c"
+              ></i>
+              Logout</a
+            >
+          </li>
+        </ul>
+
+        <button class="btn">+ New Post</button>
+      </header>
     </div>
-    <ul class="nav-list">
-      <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="icons fa-solid fa-house"></i> Home</a></li>
-      <li><a routerLink="/posts" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-grip" style="color: #7C7C7C; "></i> Posts</a></li>
-      <li><a routerLink="/users"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-regular fa-user" style="color:#7C7C7C;"></i> Users</a></li>
-      <li><a routerLink="/setting"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-gear" style="color: #7C7C7C;"></i> Setting</a></li>
-      <li><a routerLink="/logout"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-arrow-right-from-bracket" style="color: #7C7C7C;"></i> Logout</a></li>
-    </ul>
-
-
-    <button class="btn">+ New Post</button>
-  </header>
-</div>
+  </body>
+</html>
