@@ -1,0 +1,51 @@
+<div class="add">
+  <div class="main-div">
+    <div class="cancel">
+      <a routerLink="/users"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <h2>Add New User</h2>
+    <div class="all-section">
+      <form class="form" [formGroup]="regValidation">
+        <div class="add-img">
+          <img  [src]="imageUrl" alt="Selected Image" width="180px" height="250px">
+          <label for="file-upload" class="custom-file-upload">
+            <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*">
+            Upload Image
+          </label>
+        </div>
+        <div class="inputs">
+          <div>
+            <input  type="text" formControlName="name"  id="name" placeholder="Full Name">
+            @if(!isNameValid){
+            <p class="invalid"> length between 4-20 </p>
+            }
+          </div>
+          <div>
+            <input  type="text" formControlName="email" id="email"  placeholder="Email">
+            @if(!isEmailValid){
+            <p class="invalid">Please enter a valid Email address </p>
+            }
+          </div>
+          <div>
+            <input  type="number" formControlName="age"  id="age" placeholder="Age">
+            @if(!isAgeValid)  {
+            <p class="invalid">Please enter age between 10-50</p>
+            }
+          </div>
+          <div>
+            <input  type="number" formControlName="phone" id="phone" placeholder="Phone">
+            @if (!isPhoneValid) {
+            <p class="invalid"> Please enter a valid phone number </p>
+            }
+          </div>
+            <a  (click)="Add()">Add</a>
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- <button type="button" (click)="AddPost(img.value , title.value , description.value)">ADD</button> -->
+</div>

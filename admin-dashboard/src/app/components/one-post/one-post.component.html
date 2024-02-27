@@ -1,0 +1,11 @@
+<div class="blogs" >
+  <div class="one-blog" >
+    <img [src]="onepost.image" width="100%" height="150px" alt="{{ onepost.image }}" >
+    <h6>{{onepost.title}}</h6>
+    <p>{{onepost.description}}</p>
+    <div class="edit-delete">
+      <a routerLink="/edit-post" class="edit">Edit</a>
+      <a class="delete">Delete</a>
+    </div>
+  </div>
+</div>

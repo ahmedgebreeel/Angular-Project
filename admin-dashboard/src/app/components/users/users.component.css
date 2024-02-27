@@ -1,4 +1,104 @@
-.users{
+/* .users{
+  border: 2px solid rgb(255, 255, 255);
+  margin-left: 50px;
+  width: 72%;
+  position: absolute;
+  left: 21%;
+  
+}
+.profile{
+  margin-top: 20px;
+}
+.profile img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-txt > p{
+  color: rgba(160, 160, 160, 1);
+}
+.content{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.content >p{
+  font-size: 16px;
+  color: rgba(160, 160, 160, 1);
+}
+.user-search{
+  display: flex;
+  justify-content: space-between;
+
+}
+.user-search >input{
+  width: 440px;
+  height: 50px;
+  padding-left: 20px;
+  background-color:#F5F5F5;
+  border-radius: 10px;
+  border: none;
+}
+.user-txt a{
+  background-color: #EC7849;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  padding-top: 7px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.user-txt{
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+.user-txt p{
+  font-size: 20px;
+  margin-top: 5px;
+}
+.user-txt span{
+  font-weight: 500;
+}
+table{
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+table .frist{
+  width: 80px;
+}
+table th:not(.frist){
+  width: 23%;
+}
+table thead {
+  height: 50px;
+}
+table thead>tr{
+  background-color: rgba(237, 155, 128, 0.3);
+  padding: 10px ;
+}
+table ~th{
+  padding-left: 10px;
+}
+table td>img{
+  margin: 12px;
+}
+table td{
+  border-bottom:1px solid #D9D9D9 ;
+}
+tbody td>a{
+  margin-left: 10px;
+}
+
+ */
+
+
+
+
+ .users{
   border: 2px solid rgb(255, 255, 255);
   margin-left: 20px;
   width: 975px
@@ -51,24 +151,56 @@
   font-size: 20px;
   margin-top: 5px;
 }
+.user-txt span{
+  font-weight: 500;
+}
 .user-txt a{
   font-weight: 500;
   text-decoration: none;
   color: black;
   margin-right: 3px;
+  background-color: #EC7849;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  padding-top: 7px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
 }
 .table{
   margin-top: 30px;  border-radius: 10px;
   border: 1px solid #D9D9D9;
-}
-table{
   width: 100%;
+}
+
+table .frist{
+  width: 80px;
+}
+table th:not(.frist){
+  width: 23%;
+}
+table thead {
+  height: 50px;
+}
+table thead>tr{
+  background-color: rgba(237, 155, 128, 0.3);
+  padding: 10px ;
 }
 .table th{
   background-color: rgba(237, 155, 128, 0.3);
   width: 22%;
   text-align: center;
   color: #EC7849;
+}
+table ~th{
+  padding-left: 10px;
+}
+
+tbody td>a{
+  margin-left: 10px;
 }
 
 .table td>img{

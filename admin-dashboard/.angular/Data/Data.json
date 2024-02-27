@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "image": "assets/images/person2.jpg",
+      "name": "Ali Ahmed",
+      "email": "ali@gmail.com",
+      "age": "22",
+      "phone": "0222222",
+      "id": "6df6"
+    },
+    {
+      "image": "assets/images/person3.jpg",
+      "name": "Doaa Ahmed",
+      "email": "doaa@gmail.com",
+      "age": "22",
+      "phone": "033333333",
+      "id": "17c1"
+    },
+    {
+      "image": "assets/images/person4.jpg",
+      "name": "Ahmed Ali",
+      "email": "ahmed@gmail.com",
+      "age": "22",
+      "phone": "04444444",
+      "id": "2b3d"
+    },
+    {
+      "image": "assets/images/person5.jpg",
+      "name": "Eman Mohamed",
+      "email": "eman@gmail.com",
+      "age": "22",
+      "phone": "055555555",
+      "id": "22bf"
+    },
+    {
+      "image": "assets/images/person6.jpg",
+      "name": "Ibthal Ahmed",
+      "email": "ibthal@gmail.com",
+      "age": "22",
+      "phone": "0666666666",
+      "id": "9a53"
+    },
+    {
+      "image": "assets/images/person7.jpg",
+      "name": "Alaa Omar",
+      "email": "alaa@gmail.com",
+      "age": "22",
+      "phone": "0777777",
+      "id": "4d5a"
+    },
+    {
+      "image": "assets/images/person8.jpg",
+      "name": "Omar Mohamed",
+      "email": "Omar@gmail.com",
+      "age": "22",
+      "phone": "088888888",
+      "id": "e200"
+    }
+  ],
+  "posts": [
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "376f"
+    },
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "45a1"
+    },
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "b91b"
+    },
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "4abd"
+    },
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "d793"
+    },
+    {
+      "image": "assets/images/1blog.jpg",
+      "title": "Shakshoka",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "id": "8977"
+    }
+
+
+  ]
+}

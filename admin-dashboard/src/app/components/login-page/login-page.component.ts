@@ -72,12 +72,19 @@ removeInput(){
     // console.log(this.loginValidation);
 
     this.sevice.login({email, password}).subscribe({
-      next: (data)=>{console.log(data.body.userName);
+      next: (data)=>{;
         if (data.body.role === "admin"){
           // Save the token to local storage
           localStorage.setItem("token", data.body.token);
+          localStorage.setItem("userName", data.body.userName);
+
           // Navigate to another component with the username as a query parameter
-          this.router.navigate(['/home'], {queryParams:{userName: data.body.userName}});
+          this.router.navigate(['/dashboard'], {queryParams:{userName: data.body.userName}});
+        }else if (data.body.role === "user"){
+          // Save the token to local storage
+          localStorage.setItem("token", data.body.token);
+          // Navigate to another component with the username as a query parameter
+          this.router.navigate(['/user-home'], {queryParams:{userName: data.body.userName}});
         }
       },
       error: (err)=>{console.log(err);

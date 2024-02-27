@@ -14,7 +14,7 @@
         <ul class="nav-list">
           <li>
             <a
-              routerLink="/home"
+              routerLink="/dashboard"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: true }"
               ><i class="icons fa-solid fa-house"></i> Home</a
@@ -60,9 +60,50 @@
             >
           </li>
         </ul>
-
-        <button class="btn">+ New Post</button>
+        <a routerLink="/newpost" >
+          <button  class="btn">+ New Post</button>
+        </a>
       </header>
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- basma header html -->
+
+
+<!-- <div class="contain">
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="assets/images/logo.png"  height="" alt="">
+    </div>
+    <ul class="nav-list">
+      <li><a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="icons fa-solid fa-house"></i> Home</a></li>
+      <li><a routerLink="posts" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-grip" style="color: #7C7C7C; "></i> Posts</a></li>
+      <li><a routerLink="users"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-regular fa-user" style="color:#7C7C7C;"></i> Users</a></li>
+      <li><a routerLink="setting"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-gear" style="color: #7C7C7C;"></i> Setting</a></li>
+      <li><a routerLink="logout"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class=" icons fa-solid fa-arrow-right-from-bracket" style="color: #7C7C7C;"></i> Logout</a></li>
+    </ul>
+
+
+    <a class="btn" routerLink="newpost"><i class="fa-solid fa-plus"></i> New Post</a>
+  </header> -->
