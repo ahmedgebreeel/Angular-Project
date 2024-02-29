@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   userName:any;
   usersNum = 0;
+  blogs :any;
 
   constructor(private router: ActivatedRoute, private adminService: AdminControlService){
     /// displaying username 
@@ -42,8 +43,11 @@ export class HomeComponent implements OnInit {
     });
 
     this.adminService.getBlogs(headers).subscribe({
-      next:(data)=>{;
-       console.log(data);
+      next:(data)=>{
+       this.blogs = data.body;
+       console.log(this.blogs[0]);
+       
+       
        
       },
       error:(err)=>{console.log(err);

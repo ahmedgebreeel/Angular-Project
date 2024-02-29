@@ -7,16 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   private DB_URL = 'http://localhost:8000/user';
-  private DB_URL2 = 'http://localhost:3000/posts';
+  private DB_URL2 = 'http://localhost:8000/blogs';
   constructor(private myClient: HttpClient, private myPosts: HttpClient) {}
 
   GetAllUsers(headers?: HttpHeaders): Observable<HttpResponse<any>> {
     return this.myClient.get(this.DB_URL, {headers,observe: "response"});
   }
 
-  GetAllPosts() {
-    return this.myPosts.get(this.DB_URL2);
+  GetAllPosts(headers?: HttpHeaders): Observable<HttpResponse<any>> {
+    return this.myClient.get(this.DB_URL2, {headers,observe: "response"});
   }
+  // GetAllPosts() {
+  //   return this.myPosts.get(this.DB_URL2);
+  // }
   AddNewUser(user: any) {
     return this.myClient.post(this.DB_URL, user);
   }

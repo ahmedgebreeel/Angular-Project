@@ -26,8 +26,8 @@
     </div>
 
     <div class="mt-2">
-      <div class="blogs">
-        @for(post of Posts;track post.title){
+      <div class="blogs d-flex flex-wrap">
+        @for(post of Posts.slice(0,6);track post.title){
         <app-one-post [onepost]="post"></app-one-post>
         }
       <div class="edit-delete">
