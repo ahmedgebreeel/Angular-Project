@@ -2,16 +2,19 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .one-blog{
   border: 2px solid #eee;
-  width: 340px;
+  width: 440px;
+  height: 460px;
   border-radius: 20px;
   padding-bottom: 40px;
 }
 .one-blog > img{
   border-top-left-radius:20px ;
   border-top-right-radius:20px ;
+
 }
 .one-blog >h6{
   padding: 15px 15px 0 15px;
@@ -22,22 +25,24 @@
   color: (116, 116, 116, 1)
 }
 .edit-delete{
-  margin-left: 20px;
+  margin-left: 10%;
 }
 .edit{
   background-color: white;
   border: #EC7849 2px solid;
-  padding:8px 40px;
+  padding:10px 55px;
   border-radius: 10px;
   color: #EC7849;
   margin-left: 15px;
   text-decoration: none;
-  margin: 10px 20px;
+  margin: 20px 20px;
+
+  
 }
 .delete{
   background-color: #EC7849;
   border: white 2px solid;
-  padding: 8px 40px;
+  padding: 10px 55px;
   border-radius: 10px;
   color: white;
   text-decoration: none;

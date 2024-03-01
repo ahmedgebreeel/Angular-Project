@@ -1,0 +1,46 @@
+<div class="add">
+  <div class="main-div">
+    <div class="cancel">
+      <a routerLink="/users"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <h2>Update User</h2>
+    <div class="all-section">
+      <form class="form">
+        <!-- <div class="add-img">
+          <img [src]="imageUrl" alt="Selected Image" width="180px" height="250px">
+          <label for="file-upload" class="custom-file-upload">
+            <input id="file-upload" type="file" (change)="onFileSelected($event)" [(ngModel)]="user.image" accept="image/*" >
+            Upload Image
+          </label>
+        </div> -->
+        <div class="inputs">
+          <div>
+            <input type="text" name="name" [(ngModel)]="user.name" id="name">
+          </div>
+
+          <div>
+            <input type="text" name="email" [(ngModel)]="user.email" id="email">
+          </div>
+
+          <div class="inputSelect">
+            <input type="number" name="age" [(ngModel)]="user.age" id="age">
+            <select name="role" id="role">
+              <option value="volvo">Admin</option>
+              <option value="saab">User</option>
+            </select>
+          </div>
+
+          <div>
+            <input type="text" name="phone" [(ngModel)]="user.phone" id="phone">
+          </div>
+          <a (click)="UpdateUser()">Save Changes</a>
+
+
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -6,13 +6,13 @@
     <h2>Add New User</h2>
     <div class="all-section">
       <form class="form" [formGroup]="regValidation">
-        <div class="add-img">
+        <!-- <div class="add-img">
           <img  [src]="imageUrl" alt="Selected Image" width="180px" height="250px">
           <label for="file-upload" class="custom-file-upload">
             <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*">
             Upload Image
           </label>
-        </div>
+        </div> -->
         <div class="inputs">
           <div>
             <input  type="text" formControlName="name"  id="name" placeholder="Full Name">
@@ -35,6 +35,12 @@
           <div>
             <input  type="number" formControlName="phone" id="phone" placeholder="Phone">
             @if (!isPhoneValid) {
+            <p class="invalid"> Please enter a valid phone number </p>
+            }
+          </div>
+          <div>
+            <input  type="password" formControlName="password" id="password" placeholder="password">
+            @if (!isPasswordValid) {
             <p class="invalid"> Please enter a valid phone number </p>
             }
           </div>

@@ -8,7 +8,7 @@
 }
 .main-div{
   background-color: white;
-  height: 550px;
+  height: 600px;
   width: 70%;
   margin-left: 10%;
   border-radius: 20px;
@@ -91,7 +91,7 @@ input[type="file"] {
   border-radius: 10px;
   position: absolute;
   right: 18%;
-  bottom: 15%;
+  bottom: 30%;
   font-size: 20px;
   font-weight: 500;
 }

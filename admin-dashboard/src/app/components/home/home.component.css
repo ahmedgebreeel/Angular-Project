@@ -1,7 +1,7 @@
 .home{
   border: 2px solid white;
-  margin-left: 20px;
-  width: 97%;
+  margin:60px 100px 10px 30px;
+  width: 95%;
 }
 .profile{
   float: right;
@@ -15,7 +15,7 @@
   color: rgba(160, 160, 160, 1);
 }
 .content{
-  margin-top: 70px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 .content >p{

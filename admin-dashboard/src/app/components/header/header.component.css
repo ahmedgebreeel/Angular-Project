@@ -1,17 +1,17 @@
 .contain{
-  width: 320px;
+  width: 100%;
+  margin: 0;
 
 }
 .navbar{
   border: 2px solid #eee;
   display: flex;
   flex-direction: column;
-  height: 770px;
+  height: 100vh;
   width: 320px;
-  border-radius: 20px;
 }
 .nav-logo> img{
-  margin:20px auto 20px auto;
+  margin:30px auto 20px auto;
   width:250px;
 
 }
@@ -21,6 +21,7 @@
   list-style: none;
   justify-content: space-between;
   height: 350px;
+  margin-top: 20px;
 
 }
 ul{
@@ -42,7 +43,7 @@ ul{
   background-color: #EC7849;
   width: 215px;
   height: 55px;
-  margin:25% auto 30px auto;
+  margin:20% auto 70px auto;
   border-radius: 20px;
   color: white;
   font-size: 20px;

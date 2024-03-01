@@ -96,12 +96,10 @@ tbody td>a{
  */
 
 
-
-
  .users{
   border: 2px solid rgb(255, 255, 255);
-  margin-left: 20px;
-  width: 975px
+  margin:60px 100px 10px 30px;
+  width: 95%
 }
 
 .profile img{
@@ -122,10 +120,11 @@ tbody td>a{
 .user-search{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 
 }
 .user-search >input{
-  width: 440px;
+  width: 40%;
   height: 50px;
   padding-left: 20px;
   background-color:#F5F5F5;
@@ -143,7 +142,7 @@ tbody td>a{
   margin-right: 15px;
 }
 .user-txt{
-  width: 295px;
+  
   display: flex;
   justify-content: space-between;
 }
@@ -160,7 +159,7 @@ tbody td>a{
   color: black;
   margin-right: 3px;
   background-color: #EC7849;
-  width: 150px;
+  width: 170px;
   height: 45px;
   text-align: center;
   padding-top: 7px;
@@ -171,9 +170,10 @@ tbody td>a{
   border-radius: 10px;
 }
 .table{
-  margin-top: 30px;  border-radius: 10px;
+  margin-top: 30px; 
   border: 1px solid #D9D9D9;
   width: 100%;
+
 }
 
 table .frist{
@@ -195,16 +195,20 @@ table thead>tr{
   text-align: center;
   color: #EC7849;
 }
+
 table ~th{
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 tbody td>a{
   margin-left: 10px;
 }
-
+tbody td{
+  border-bottom: 1px solid #D9D9D9;
+}
 .table td>img{
   margin: 10px;
+
 }
 .table td{
   border-bottom:1px solid #D9D9D9 ;
@@ -214,4 +218,8 @@ td>button{
 padding-left: 10px;
 border:none;
 background-color: white;
+}
+tbody{
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
 }

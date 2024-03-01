@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AdminControlService } from '../../Services/admin-control.service';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { OnePostComponent } from '../one-post/one-post.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, HttpClientModule],
+  imports: [HeaderComponent,OnePostComponent, HttpClientModule, RouterModule],
   providers:[AdminControlService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -45,7 +46,7 @@ export class HomeComponent implements OnInit {
     this.adminService.getBlogs(headers).subscribe({
       next:(data)=>{
        this.blogs = data.body;
-       console.log(this.blogs[0]);
+      //  console.log(this.blogs[0]);
        
        
        

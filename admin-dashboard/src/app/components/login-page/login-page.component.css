@@ -5,7 +5,9 @@
   height: 1px;
   background: #eee;
 }
-
+.loginDiv{
+  margin-top: 5%;
+}
 /* Stylee Booton */
 button {
   align-items: center;

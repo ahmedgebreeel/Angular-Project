@@ -20,21 +20,37 @@ export class UserService {
   // GetAllPosts() {
   //   return this.myPosts.get(this.DB_URL2);
   // }
-  AddNewUser(user: any) {
-    return this.myClient.post(this.DB_URL, user);
+
+  
+  GetByID(id: any, headers?:HttpHeaders) {
+    return this.myClient.get(`${this.DB_URL}/${id}`, {headers});
   }
-  AddNewPost(post: any) {
-    return this.myClient.post(this.DB_URL2, post);
+  UpdateUser(id: any, user: any, headers?:HttpHeaders) {
+    return this.myClient.patch(`${this.DB_URL}/${id}`, user, {headers});
   }
-  SavePost(inputData: object, onepostId: number) {
-    return this.myPosts.get(
-      `http://localhost:3000/posts/${onepostId}/edit-post`,
-      inputData
-    );
+
+ 
+  GetPostByID(id: any, headers?: HttpHeaders) {
+    return this.myClient.get(`${this.DB_URL2}/${id}`, {headers});
   }
-  DeletePost(onepostId: number) {
-    return this.myPosts.delete(
-      `http://localhost:3000/posts/${onepostId}/delete-post`
-    );
+  UpdatePost(id: any, post: any, headers?: HttpHeaders) {
+    return this.myClient.patch(`${this.DB_URL2}/${id}`, post, {headers});;
   }
+
+
+  AddNewUser(user: any, headers?: HttpHeaders) {
+    return this.myClient.post(this.DB_URL, user, {headers});
+  }
+  AddNewPost(post: any, headers?: HttpHeaders) {
+    return this.myPosts.post(this.DB_URL2, post, {headers});
+  }
+
+
+  deletePost(id: any, headers?: HttpHeaders) {
+      return this.myPosts.delete(`${this.DB_URL2}/${id}`, {headers});
+  }
+  deleteUser(id: any, headers?:HttpHeaders) {
+      return this.myClient.delete(`${this.DB_URL}/${id}`, {headers});
+  }
+ 
 }

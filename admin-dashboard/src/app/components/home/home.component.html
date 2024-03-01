@@ -1,5 +1,5 @@
 
-<div class="container d-flex mt-5">
+<div class="d-flex ">
   
   <app-header></app-header>
   <section class="home">
@@ -47,33 +47,31 @@
     <div class="mt-5">
       <h4>Latest Blogs</h4>
       <div class="blogs">
-          
-                      @for (blog of blogs.slice(0,3); track blog._id) {
+                      @for (blog of blogs; track blog._id) {
+                           <app-one-post [onepost]="blog"></app-one-post>
 
-                        <div class="one-blog">
-                            <!-- <img src="assets/images/" + {{blog.image}} width="100%" height="150px" > -->
-                            <h6>{{blog.title}}</h6>
-                            <p> {{blog.description}}</p>     
-                            <div>
-                              <a class="edit">Edit</a>
-                              <a class="delete">Delete</a>
-                            </div>
-                        </div>
                       }
-
-                    
-                      <!-- <div class="one-blog">
-                          <img src="./../../../assets/images/2blog.jpg" width="100%" height="150px">
-                          <h6>Sweet Potato Shakshuka</h6>
-                          <p>This is an untraditional but delicious take on Shakshuka with a sweet potato base . </p>
-                          <div>
-                            <a class="edit">Edit</a>
-                            <a class="delete">Delete</a>
-                          </div>
-                      -->
+                      
+                      
+                     
       </div>
     </div>
   
   </section>
-
+  
 </div>
+
+
+
+
+
+
+<!-- <div class="one-blog">
+    <img [src]="'http://localhost:8000/images/' + blog.image" width="100%" height="150px" >
+    <h6>{{blog.title}}</h6>
+    <p> {{blog.description}}</p>     
+    <div>
+      <a routerLink="/edit-post/{{blog._id}}" class="edit">Edit</a>
+      <a class="delete" (click)="deletePost(blog.id)">Delete</a>
+    </div>
+</div> -->

@@ -20,7 +20,8 @@
 
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { jwtDecode } from 'jwt-decode';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,16 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   private url = "http://localhost:8000/user/login";
+
+  userData:any = new BehaviorSubject(null);
+  tokenData(){
+    let encodeToken = JSON.stringify(localStorage.getItem('token'));
+    let decodeJwt :object = jwtDecode(encodeToken);
+   
+    this.userData.next(decodeJwt);
+    console.log(this.userData.getValue());
+
+  }
 
   constructor(private client: HttpClient) { }
 

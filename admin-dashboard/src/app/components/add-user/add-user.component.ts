@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { Route, Router, RouterLink } from '@angular/router';
 import { UserService } from '../../Services/users.service';
@@ -21,6 +21,7 @@ export class AddUserComponent {
     email: new FormControl("", [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]),
     age: new FormControl("", [Validators.required,Validators.min(10),Validators.max(50)]),
     phone: new FormControl("", [Validators.required, Validators.maxLength(15),Validators.minLength(11)]),
+    password : new FormControl("", [Validators.required])
   });
 
   get isNameValid() {
@@ -39,14 +40,24 @@ export class AddUserComponent {
   get isPhoneValid() {
     return this.regValidation.controls["phone"].valid;
   }
+  get isPasswordValid(){
+    return this.regValidation.controls["password"].valid;
+
+  }
 
   Add() {
+        const token = localStorage.getItem('token');
+        const header = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     if (this.regValidation.valid) {
-      const { name, email, age, phone } = this.regValidation.value;
-      let newUser = { name, email, age , phone };
-      this.myServ.AddNewUser(newUser).subscribe({
+      const { name, email, age, phone, password } = this.regValidation.value;
+      let newUser = { name, email, age, phone, password };
+      console.log(newUser);
+      
+      this.myServ.AddNewUser(newUser, header).subscribe({
+        
         next:(data)=>{
           console.log(data);
+          this.router.navigate(['/users']);
         },
         error:(err)=>{
           console.log(err)
@@ -59,17 +70,17 @@ export class AddUserComponent {
   }
 
 
-  imageUrl = "../../../assets/images/new person.jpg"
+  // imageUrl = "assets/images/new person.jpg"
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    const reader = new FileReader();
+  // onFileSelected(event: any) {
+  //   const file: File = event.target.files[0];
+  //   const reader = new FileReader();
 
-    reader.onload = (e: any) => {
-      this.imageUrl = e.target.result;
-    };
+  //   reader.onload = (e: any) => {
+  //     this.imageUrl = e.target.result;
+  //   };
 
-    reader.readAsDataURL(file);
-  }
+  //   reader.readAsDataURL(file);
+  // }
 
 }

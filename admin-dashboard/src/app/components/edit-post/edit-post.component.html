@@ -3,29 +3,29 @@
     <div class="cancel">
       <a routerLink="/posts"><i class="fa-solid fa-xmark"></i></a>
     </div>
-    <h2>EditPost</h2>
+    <h2>Edit Post</h2>
     <div class="all-section">
-      <form class="form">
+      <div class="form">
         <div class="add-img">
-          <img  [src]="imageUrl" alt="Selected Image" width="180px" height="250px">
+          <img [src]="'http://localhost:8000/images/' + post.image" alt="Selected Image" width="180px" height="250px">
           <label for="file-upload" class="custom-file-upload">
-            <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*">
+            <input id="file-upload" type="file" [(ngModel)]="post.image" (change)="onFileSelected($event)"
+              accept="image/*">
             Upload Image
           </label>
         </div>
         <div class="inputs">
           <div>
-            <input #title  type="text" id="title" placeholder="Title">
-
+            <input type="text" id="title" [(ngModel)]="post.title">
           </div>
           <div>
-            <textarea #description type="text"  id="description"  placeholder="Description"></textarea>
+            <textarea type="text" id="description" [(ngModel)]="post.description"></textarea>
           </div>
-            <a  (click)="AddPost(title.value , description.value)">Add</a>
+          <a (click)="UpdatePost()">Save Changes</a>
         </div>
 
 
-      </form>
+      </div>
 
     </div>
   </div>

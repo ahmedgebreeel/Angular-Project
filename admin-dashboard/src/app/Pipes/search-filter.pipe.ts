@@ -6,15 +6,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchFilterPipe implements PipeTransform {
 
-  transform(items: any[],searchTerm: string): any[] {
-    if (!items) return [];
-    if (!searchTerm) return items;
+  transform(value: any , args?:any): any {
+    if (!value) return [];
+    if (!args) return value;
 
-    searchTerm = searchTerm.toLowerCase();
+    args = args.toLowerCase();
 
-    return items.filter(item => {
-      return item.name.toLowerCase().includes(searchTerm);
-    });
+    return value.filter((id :any) => {
+      return JSON.stringify(id).toLowerCase().includes(args)
+      });
   }
 
 }

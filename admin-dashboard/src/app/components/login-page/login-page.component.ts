@@ -66,34 +66,67 @@ removeInput(){
  
 }
 
-  Add(email:any, password:any){
-   this.validationEmail();
-   this.validationPassword();
-    // console.log(this.loginValidation);
+Add(email:any, password:any){
+  this.validationEmail();
+  this.validationPassword();
 
-    this.sevice.login({email, password}).subscribe({
-      next: (data)=>{;
-        if (data.body.role === "admin"){
-          // Save the token to local storage
-          localStorage.setItem("token", data.body.token);
-          localStorage.setItem("userName", data.body.userName);
+   this.sevice.login({email, password}).subscribe({
+     next: (data)=>{
+       localStorage.setItem("token", data.body.token);
+       localStorage.setItem("userName", data.body.userName);
+       
+       this.sevice.tokenData();
+       console.log(data.body)
+       if (data.body.role === "admin"){
+         // Save the token to local storage
 
-          // Navigate to another component with the username as a query parameter
-          this.router.navigate(['/dashboard'], {queryParams:{userName: data.body.userName}});
-        }else if (data.body.role === "user"){
-          // Save the token to local storage
-          localStorage.setItem("token", data.body.token);
-          // Navigate to another component with the username as a query parameter
-          this.router.navigate(['/user-home'], {queryParams:{userName: data.body.userName}});
-        }
-      },
-      error: (err)=>{console.log(err);
-        alert('Login failed. Please check your credentials and try again.');
-      }
-    });
-    // this.Email="";
-    // this.Password="";
-  }
+         // Navigate to another component with the username as a query parameter
+         this.router.navigate(['/dashboard'], {queryParams:{userName: data.body.userName}});
+       }else if (data.body.role === "user"){
+         // Save the token to local storage
+         //localStorage.setItem("token", data.body.token);
+         // Navigate to another component with the username as a query parameter
+         this.router.navigate(['/user-home'], {queryParams:{userName: data.body.userName}});
+       }
+
+
+       
+     },
+     error: (err)=>{console.log(err);
+       // alert('Login failed. Please check your credentials and try again.');
+     }
+   });
+
+ }
+
+  // Add(email:any, password:any){
+  //  this.validationEmail();
+  //  this.validationPassword();
+  //   // console.log(this.loginValidation);
+
+  //   this.sevice.login({email, password}).subscribe({
+  //     next: (data)=>{;
+  //       if (data.body.role === "admin"){
+  //         // Save the token to local storage
+  //         localStorage.setItem("token", data.body.token);
+  //         localStorage.setItem("userName", data.body.userName);
+
+  //         // Navigate to another component with the username as a query parameter
+  //         this.router.navigate(['/dashboard'], {queryParams:{userName: data.body.userName}});
+  //       }else if (data.body.role === "user"){
+  //         // Save the token to local storage
+  //         localStorage.setItem("token", data.body.token);
+  //         // Navigate to another component with the username as a query parameter
+  //         this.router.navigate(['/user-home'], {queryParams:{userName: data.body.userName}});
+  //       }
+  //     },
+  //     error: (err)=>{console.log(err);
+  //       alert('Login failed. Please check your credentials and try again.');
+  //     }
+  //   });
+  //   // this.Email="";
+  //   // this.Password="";
+  // }
 
   showPassword(){
     this.changeType= !this.changeType;

@@ -19,7 +19,7 @@ export class RegistrationPageComponent {
   AddUser(name:any, email:any, password:any, passwordConfirm:any){
       this.service.register({name, email, password, passwordConfirm}).subscribe({
         next: (data)=>{console.log(data);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/dashboard']);
         },
         error: (err)=>{console.log(err);
           // alert("Error: " + err.error.error);

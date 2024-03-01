@@ -1,13 +1,12 @@
-<div class="container d-flex mt-5">
-
-  <app-header></app-header>
+<div class="d-flex">
+  <app-header class="header"></app-header>
 
   <section class="users">
     <div class="profile float-end d-flex">
-      <img src="assets/images/profile.png" width="60px" height="50px" alt="">
+      <img src="assets/images/profile.png" width="60px" height="50px" alt="" />
       <div class="profile-txt">
-          <h5>{{userName}}</h5>
-          <p>Web Developer</p>
+        <h5>{{ userName }}</h5>
+        <p>Web Developer</p>
       </div>
     </div>
 
@@ -17,59 +16,49 @@
     </div>
 
     <div class="user-search">
-      <input type="search" placeholder="search...">
+      <input type="search" class="form-control" [(ngModel)]="searchText" placeholder="Search ...">
 
-      <div class=" user-txt" >
+      <div class="user-txt">
         <a routerLink="/add-user" (click)="addUser()"> Add New</a>
-        <p>Sort by <span> Age <i class="fa-solid fa-sort-down"></i></span></p>
       </div>
     </div>
 
     <table>
       <thead>
-          <tr>
-            <th class="frist"></th>
-            <th>FullName</th>
-            <th>Email</th>
-            <th>Age</th>
-            <th>Phone</th>
-            <th></th>
-
-      </tr>
+        <tr>
+          <th class="frist"></th>
+          <th>FullName</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
-        @for(user of Users.slice(0,8) ; track user.id ){
-          <tr>
-            <!-- <td><img [src]="user.image" alt="{{ user.image }}" style="border-radius: 50%;" width="40px" height="40px"></td> -->
-            <td> <img src="assets/images/profile.png" style="border-radius: 50%" width="45px" height="40px" alt=""> </td>
-            <td>{{user.name }}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.age}}</td>
-            <td>{{user.phone}}</td>
-            <td>
-              <a><i class="fa-solid fa-pen" style="color: #EC7849;"></i></a>
-              <a><i class="fa-solid fa-trash-can" style="color: #EC7849;"></i></a>
-            </td>
-          </tr>
+        @for(user of Users | searchFilter : searchText; track
+        user.id){
+        <tr>
+          <!-- <td><img [src]="user.image" alt="{{ user.image }}" style="border-radius: 50%;" width="40px" height="40px"></td> -->
+          <td style="padding: 20px 10px;">
+            <img
+              src="assets/images/profile.png"
+              style="border-radius: 50%"
+              width="45px"
+              height="40px"
+              alt=""
+            />
+          </td>
+          <td >{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.phone}}</td>
+          <td >
+            <a routerLink="/edit-user/{{ user._id }}" style="padding-right: 10px;"><i class="fa-solid fa-pen" style="color: #ec7849"></i></a>
+            <a (click)="deleteRow(user._id)"><i class="fa-solid fa-trash-can" style="color: #ec7849"></i></a>
+          </td>
+        </tr>
         }
       </tbody>
     </table>
-
   </section>
-
-
-
 </div>
-
-
-
- 
-
- 
-
-
-
-
-
-
-

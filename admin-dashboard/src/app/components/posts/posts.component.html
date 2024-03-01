@@ -1,6 +1,6 @@
 
 
-<div class="container d-flex mt-5">
+<div class="d-flex ">
 
    <app-header></app-header>
     
@@ -19,7 +19,7 @@
     </div>
 
     <div class="btns">
-      <button class="btn-a" >All</button>
+      <button class="btn-a all"  >All</button>
       <button class="btn-a">Fruits and Vegetables</button>
       <button class="btn-a">Protien</button>
       <button class="btn-a">Starchy Food</button>
@@ -27,8 +27,8 @@
 
     <div class="mt-2">
       <div class="blogs d-flex flex-wrap">
-        @for(post of Posts.slice(0,6);track post.title){
-        <app-one-post [onepost]="post"></app-one-post>
+        @for(post of Posts;track post.title){
+        <app-one-post [onepost]="post" (postDeleted)="onPostDeleted($event)"></app-one-post>
         }
       <div class="edit-delete">
       </div>

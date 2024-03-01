@@ -1,11 +1,15 @@
 <div class="blogs" >
   <div class="one-blog" >
-    <img [src]="'http://localhost:8000/uploads/blog/' + onepost.image" width="100%" height="150px" alt="{{ onepost.image }}" >
+    <img [src]="'http://localhost:8000/images/' + onepost.image" width="450px" height="250px" alt="{{ onepost.image }}" >
     <h6>{{onepost.title}}</h6>
     <p>{{onepost.description}}</p>
     <div class="edit-delete">
-      <a routerLink="'/edit-post/' + onepost.id" class="edit">Edit</a>
-      <a class="delete">Delete</a>
+      <a routerLink="/edit-post/{{onepost._id}}" class="edit">Edit</a>
+      <a class="delete" (click)="deletePost(onepost._id)">Delete</a>
     </div>
   </div>
 </div>
+
+    
+
+

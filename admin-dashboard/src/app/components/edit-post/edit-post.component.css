@@ -1,9 +1,9 @@
-.add{
+/* .add{
   background-color: rgba(0, 0, 0, 0.51);
   width: 100%;
   height: 100%;
   position: absolute;
-  /* left: 22%; */
+  
   padding-left: 20%;
 }
 .main-div{
@@ -108,6 +108,144 @@ input[type="file"] {
 }
 .form{
   display: flex;
+}
+.cancel a{
+  float: right;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add{
+  background-color: rgba(0, 0, 0, 0.51);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* left: 22%; */
+  padding-left: 15%;
+}
+.main-div{
+  background-color: white;
+  height: 550px;
+  width: 70%;
+  margin-left: 10%;
+  border-radius: 20px;
+  margin-top: 6%;
+  padding: 40px 50px;
+}
+.custom-file-upload {
+  border: 2px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 4px;
+}
+.add-img > img{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+.custom-file-upload:hover {
+  background-color: #e9e9e9;
+}
+
+input[type="file"] {
+  display: none;
+}
+.add-img >label {
+  height: 45px;
+  border: none;
+  padding-top: 4px;
+  padding-left: 27px;
+  font-weight: 500;
+  color: #EC7849;
+  background-color: rgba(237, 155, 128, 0.3);
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.invalid{
+  font-size: 14px;
+  margin: 0;
+  height: 28px;
+  margin-left: 25px;
+  color: red;
+}
+
+.inputs input , textarea{
+  width: 95%;
+  height: 50px;
+  background-color:#F5F5F5;
+  border-radius: 10px;
+  border: none;
+  margin:10px 20px 5px 25px;
+  padding-left: 20px;
+
+}
+.inputs textarea{
+  height: 210px;
+}
+.all-section{
+  display: flex;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+}
+.add-img{
+  display: flex;
+  flex-direction: column;
+}
+.add-img button{
+  background-color: #EC7849;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  height: 45px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+
+}
+.inputs > a{
+  height: 45px;
+  width: 150px;
+  padding-top: 4px;
+  text-align: center;
+  color: white;
+  background-color: #EC7849;
+  text-decoration: none;
+  border-radius: 10px;
+  position: absolute;
+  right: 18%;
+  bottom: 37%;
+  font-size: 20px;
+  font-weight: 500;
+}
+.inputs >a:hover{
+  background-color: white;
+  border: 2px solid #EC7849;
+  color: #EC7849;
+}
+.form{
+  display: flex;
+  width: 100%;
 }
 .cancel a{
   float: right;

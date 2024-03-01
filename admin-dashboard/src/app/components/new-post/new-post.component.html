@@ -9,7 +9,7 @@
         <div class="add-img">
           <img  [src]="imageUrl" alt="Selected Image" width="180px" height="250px">
           <label for="file-upload" class="custom-file-upload">
-            <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*">
+            <input #image id="file-upload" type="file" (change)="onFileSelected($event)" accept="image/*">
             Upload Image
           </label>
         </div>
@@ -21,7 +21,7 @@
           <div>
             <textarea #description type="text"  id="description"  placeholder="Description"></textarea>
           </div>
-            <a  (click)="AddPost(title.value , description.value)">Add</a>
+            <a  (click)="AddPost(title.value , description.value, image.value)">Add</a>
         </div>
 
 
