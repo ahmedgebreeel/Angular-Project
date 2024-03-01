@@ -10,4 +10,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+
+  logOut(){
+
+    localStorage.removeItem("token");
+  }
+
 }
