@@ -6,8 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  private DB_URL = 'http://localhost:8000/user';
-  private DB_URL2 = 'http://localhost:8000/blogs';
+  // private DB_URL = 'http://localhost:8000/user';
+  // private DB_URL2 = 'http://localhost:8000/blogs';
+  private DB_URL = 'https://dashboardadmin-83if.onrender.com/user';
+  private DB_URL2 = 'https://dashboardadmin-83if.onrender.com/blogs';
   constructor(private myClient: HttpClient, private myPosts: HttpClient) {}
 
   GetAllUsers(headers?: HttpHeaders): Observable<HttpResponse<any>> {

@@ -93,7 +93,7 @@ Add(email:any, password:any){
        
      },
      error: (err)=>{console.log(err);
-       // alert('Login failed. Please check your credentials and try again.');
+       alert('Login failed. Please check your credentials and try again.');
      }
    });
 

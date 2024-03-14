@@ -34,8 +34,7 @@
                         </h6>
                       </div>
 
-                      <!-- <form > [formGroup]="loginValidation" > -->
-                      <form>
+                      <form [formGroup]="loginValidation" >
                         <!-- < Email input -->
                         <div class="form-outline mb-4">
                           <label class="form-label" for="form1Example13"
@@ -47,7 +46,7 @@
                             id="form1Example13"
                             class="form-control form-control-lg"
                           />
-                          <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassageEmail}}</span> -->
+                          <span  class="fw-bold text-muted lowercase">{{ errorMassageEmail}}</span>
                         </div>
 
                         <!-- Password input -->
@@ -76,7 +75,7 @@
 
                             <i class=""></i>
                           </div>
-                          <!-- <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span> -->
+                          <span  class="fw-bold text-muted lowercase">{{ errorMassagePassword}}</span>
                         </div>
 
                         <div class="mb-4">

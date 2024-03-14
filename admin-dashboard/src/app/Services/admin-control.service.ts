@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class AdminControlService {
 
-  private URL = "http://localhost:8000/";
+  // private URL = "http://localhost:8000/";
+  private URL = "https://dashboardadmin-83if.onrender.com/";
+
   constructor(private adminClient :HttpClient) { }
 
   getUsers(headers?: HttpHeaders): Observable<HttpResponse<any>>{

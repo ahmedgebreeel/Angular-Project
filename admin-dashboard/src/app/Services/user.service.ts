@@ -28,7 +28,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class UserService {
 
-  private url = "http://localhost:8000/user/login";
+  // private url = "http://localhost:8000/user/login";
+  private url = "https://dashboardadmin-83if.onrender.com/user/login";
+
 
   userData:any = new BehaviorSubject(null);
   tokenData(){
