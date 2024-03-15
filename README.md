@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
@@ -25,3 +26,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+this is an dashboard website using angular and nodeJs 
+
+
+
+
+here is the API server side repo => https://github.com/ahmedgebreeel/Node-Project
+
+
+here is the link of the API after deploy on render => https://dashboardadmin-83if.onrender.com
+>>>>>>> 3cf5118905878738c4059b22d4b6dd14a6891d19
